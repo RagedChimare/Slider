@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLİDERSURELİ</title>
+    <link rel="stylesheet" href="css1.css">
+</head>
+<body>
+    <div class="slider">
+        <img src="r1.jpg" id="resim" class="resim">
+        <h1 class="baslik" id="baslik">Lezzetli Yemekler</h1>
+    </div>
+    
+</body>
+<script>
+    var resim=['r1.jpg','r2.jpg','r3.jpg','r4.jpg'];
+    var baslik=['Lezzetli Yemekler','Kültürel Dokunuş','Huzurlu Bir Gün','Muhteşem Bir Gün Batimi'];
+    var i=1
+    var sure=2000;
+    function sliderBaslat()
+    {
+        document.getElementById("resim").src=resim[i];
+        document.getElementById("baslik").innerHTML=baslik[i];
+        if (i>=resim.length-1)
+    {
+        i=0;
+    }
+    else{
+        i++;    
+    }
+    setTimeout("sliderBaslat()",sure);
+    }
+    window.onload=sliderBaslat;
+</script>
+</html>

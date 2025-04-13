@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SLİDER</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+<body onload="gizle()">
+    <div class="slider">
+        <div class="yuvarlaklar">
+            <div class="yuvarlak" onclick="r1Goster()"></div>
+            <div class="yuvarlak" onclick="r2Goster()"></div>
+            <div class="yuvarlak" onclick="r3Goster()"></div>
+            <div class="yuvarlak" onclick="r4Goster()"></div>
+        </div>
+        <img src="r1.jpg" id="r1">
+        <img src="r2.jpg" id="r2">
+        <img src="r3.jpg" id="r3">
+        <img src="r4.jpg" id="r4">
+    </div>
+</body>
+<script>
+    function gizle()
+    {
+
+        document.getElementById("r2").style.display="none";
+        document.getElementById("r3").style.display="none";
+        document.getElementById("r4").style.display="none";    
+    }
+    function r1Goster()
+    {
+        document.getElementById("r1").style.display="block";
+        document.getElementById("r2").style.display="none";
+        document.getElementById("r3").style.display="none";
+        document.getElementById("r4").style.display="none";
+    }
+    function r2Goster()
+    {
+        document.getElementById("r1").style.display="none";
+        document.getElementById("r2").style.display="block";
+        document.getElementById("r3").style.display="none";
+        document.getElementById("r4").style.display="none";
+    }
+    function r3Goster()
+    {
+        document.getElementById("r1").style.display="none";
+        document.getElementById("r2").style.display="none";
+        document.getElementById("r3").style.display="block";
+        document.getElementById("r4").style.display="none";
+    }
+    function r4Goster()
+    {
+        document.getElementById("r1").style.display="none";
+        document.getElementById("r2").style.display="none";
+        document.getElementById("r3").style.display="none";
+        document.getElementById("r4").style.display="block";
+    }
+</script>
+</html>
